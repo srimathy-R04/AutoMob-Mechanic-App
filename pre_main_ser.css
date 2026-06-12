@@ -1,10 +1,16 @@
 *{
     margin: 0;
     padding:0 ;
+    box-sizing:border-box;
     
 }
-
-
+body{
+    overflow:hidden;
+}
+img {
+    max-width-x:hidden;
+    height:auto;
+}
 nav a
 {
     text-decoration: none;
@@ -40,24 +46,11 @@ nav a{
      color: aliceblue;
     
 }
-.right{
-    display: flex;
-   flex-wrap: nowrap;
-   
-   
-  
-}
+
 .img,.msg{
     flex: 1;
 }
-.right img{
-   
-    width: 500px;
-    max-width: 100%;
-    height: auto;
-margin: 20%;
 
-}
 .msg{
     flex: 1;
     margin: 10%;
@@ -80,49 +73,81 @@ footer
     background-color: rgb(13, 50, 80);
     color: aliceblue;
 }   
-.nxt{
-    display: flex;
-   flex-wrap: nowrap;
-   
-   
-  
-}
+
 .img1,.msg1{
     flex: 1;
 }
-.nxt img{
-     max-width: 100%;
-    width: 550px;
-   
-    height: auto;
-    margin: 10%;
-    
-}
+
 .msg1{
     flex: 1;
     margin: 5%;
     
 }
-.nxt1{
-    display: flex;
-   flex-wrap: nowrap;
-   
-   
-  
-}
+
 .img2,.msg2{
     flex: 1;
 }
-.nxt1 img{
-     max-width: 100%;
-    width: 550px;
-   
-    height: auto;
-    margin: 10%;
-    
-}
+
 .msg2{
     flex: 1;
     margin: 5%;
     
 }
+.right img,
+.nxt img,
+.nxt1 img{
+    width:100%;
+    max-width:500px;
+    height:auto;
+    display:block;
+    margin:auto;
+}
+.right,
+.nxt,
+.nxt1{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+@media screen and (max-width:768px){
+
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .right,
+    .nxt,
+    .nxt1{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    .img,
+    .img1,
+    .img2,
+    .msg,
+    .msg1,
+    .msg2{
+        width:100%;
+    }
+
+    .msg,
+    .msg1,
+    .msg2{
+        margin:20px;
+        text-align:center;
+    }
+
+    button{
+        width:80%;
+        max-width:250px;
+    }
+}
+
