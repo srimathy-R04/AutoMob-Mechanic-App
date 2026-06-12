@@ -11,6 +11,7 @@ body{
     
     animation: slidebg 20s infinite;
     animation-timing-function: ease-in-out;
+    
 }
 @keyframes slidebg {
     0%{
