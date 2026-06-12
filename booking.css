@@ -1,8 +1,13 @@
-body{
-    margin: 0%;
-   height: 90vh;
-   width: 100%;
+*{
+    box-sizing:border-box;
 }
+
+body{
+    margin:0;
+    width:100%;
+    overflow-x:hidden;
+}
+
 nav a
 {
     text-decoration: none;
@@ -15,8 +20,16 @@ nav a:hover
 
 }
 header{
-    display: flex;
-   
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 #header{
     color:aliceblue;
@@ -44,15 +57,20 @@ h1{
 .contain
 {
     display: flex;
-    justify-content: end;
-    flex-wrap: nowrap;
+    justify-content: center;
+     align-items: flex-start;
+    gap:30px;
     
 }
 .st,.nd{
     flex: 1; 
 }
 .st img{
-    margin: 20%;
+    width:100%;
+    max-width:350px;
+    height:auto;
+    display:block;
+    margin:auto;
 }
 .nd{
     margin: 5%;
@@ -62,11 +80,11 @@ h1{
 label{
     font-size: large;
 }
-input{
-    padding: 2px;
-    width: 500px;
-    color: gray;
-    border-color:lightgrey;
+input,
+select{
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
 }
 
 .radio{
@@ -91,3 +109,45 @@ footer
     background-color: rgb(13, 50, 80);
     color: aliceblue;
 } 
+@media screen and (max-width:768px){
+
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .contain{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .nd,
+    .st{
+        width:100%;
+    }
+
+    .nd{
+        margin:20px;
+    }
+
+    .st img{
+        max-width:300px;
+    }
+
+    input,
+    select{
+        width:100%;
+        max-width:100%;
+    }
+
+    .but button{
+        margin:20px auto;
+        display:block;
+        width:90%;
+    }
+}
