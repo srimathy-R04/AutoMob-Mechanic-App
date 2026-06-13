@@ -1,12 +1,11 @@
-html,body{
-    margin: 0%;
-   height: 100%;
-   
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
 body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    overflow-x:hidden;
 }
 main{
     flex: 1;
@@ -23,8 +22,16 @@ nav a:hover
 
 }
 header{
-    display: flex;
-   
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
 }
 #header{
     color:aliceblue;
@@ -45,15 +52,26 @@ nav a{
     
 }
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    padding:40px;
 }
 .img,.msg2{
     flex:1;
 }
-    
+    img{
+    max-width:100%;
+    height:auto;
+}
+
+.img img{
+    width:100%;
+    max-width:500px;
+    display:block;
+    margin:auto;
+}
 footer
 {
     text-align: center;
@@ -62,3 +80,34 @@ footer
     color: aliceblue;
     margin-bottom: 0;
 } 
+@media screen and (max-width:768px){
+
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .container{
+        flex-direction:column;
+        text-align:center;
+        padding:20px;
+    }
+
+    .img,
+    .msg2{
+        width:100%;
+    }
+
+    .msg2{
+        padding:15px;
+    }
+
+    h2{
+        font-size:1.5rem;
+    }
+}
