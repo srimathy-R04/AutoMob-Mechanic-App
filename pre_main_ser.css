@@ -5,10 +5,10 @@
     
 }
 body{
-    overflow:hidden;
+    overflow-x:hidden;
 }
 img {
-    max-width-x:hidden;
+    max-width:100%;
     height:auto;
 }
 nav a
@@ -23,9 +23,16 @@ nav a:hover
 
 }
 header{
-    display: flex;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
 
-   
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
 }
 #header{
     color:aliceblue;
@@ -51,11 +58,7 @@ nav a{
     flex: 1;
 }
 
-.msg{
-    flex: 1;
-    margin: 10%;
-    
-}
+
 .msg a
 {
     text-decoration: none;
@@ -78,20 +81,15 @@ footer
     flex: 1;
 }
 
-.msg1{
-    flex: 1;
-    margin: 5%;
-    
-}
 
 .img2,.msg2{
     flex: 1;
 }
 
+.msg,
+.msg1,
 .msg2{
-    flex: 1;
-    margin: 5%;
-    
+    padding:20px;
 }
 .right img,
 .nxt img,
@@ -144,7 +142,12 @@ footer
         margin:20px;
         text-align:center;
     }
-
+    .msg ul,
+    .msg1 ul,
+    .msg2 ul{
+        text-align:left;
+        display:inline-block;
+    }
     button{
         width:80%;
         max-width:250px;
